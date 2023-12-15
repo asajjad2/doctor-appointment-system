@@ -5,8 +5,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DOCTORS_SERVICE_URL=http://doctors:9090
-      - APPOINTMENTS_SERVICE_URL=http://appointments:7070
+      - DOCTORS_SERVICE_URL=doctors:9090
+      - APPOINTMENTS_SERVICE_URL=appointments:7070
     depends_on:
       - doctors
       - appointments
