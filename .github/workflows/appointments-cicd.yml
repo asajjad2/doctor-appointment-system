@@ -33,8 +33,12 @@ jobs:
           push: true
           tags: asajjad2/doctor-appointment-appointments-microservice:appointments-${{ github.run_number }}
 
-      - name: Clone the repo
-        run: git clone https://github.com/asajjad2/doctor-appointment-system.git temp
+      - name: Checkout the repo into a different directory
+        uses: actions/checkout@v2
+        with:
+          repository: asajjad2/doctor-appointment-system
+          token: ${{ secrets.PAT }}
+          path: temp
 
       - name: Update docker-compose.yml
         run: |
