@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: asajjad2/doctor-appointment-system
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           path: temp
 
       - name: Update docker-compose.yml
