@@ -43,7 +43,7 @@ jobs:
       - name: Update docker-compose.yml
         run: |
           cd temp
-          sed -i 's|asajjad2/doctor-appointment-appointments-microservice|asajjad2/doctor-appointment-appointments-microservice:appointments-${{ github.run_number }}|' docker-compose.yml
+          sed -i 's|asajjad2/doctor-appointment-appointments-microservice:[^ ]*|asajjad2/doctor-appointment-appointments-microservice:appointments-${{ github.run_number }}|' docker-compose.yml
           git config --global user.name 'asajjad2'
           git config --global user.email 'areebsajjad21@gmail.com'
           git add docker-compose.yml
