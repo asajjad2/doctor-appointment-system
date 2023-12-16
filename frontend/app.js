@@ -43,5 +43,14 @@ app.get('/api/appointments', async (req, res) => {
   }
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
+app.get('/ready', (req, res) => {
+  res.status(200).send('OK');
+});
+
+
 app.listen(PORT, HOST); 
 console.log(`Running on http://${HOST}:${PORT}`);

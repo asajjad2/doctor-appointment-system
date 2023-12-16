@@ -23,5 +23,13 @@ def getAppointment(id):
   id = int(id) - 1
   return jsonify(appointments[id])
 
+@app.route('/health')
+def health_check():
+    return 'OK', 200
+
+@app.route('/ready')
+def readiness_check():
+    return 'OK', 200
+
 if __name__ == "__main__":
   app.run(host="0.0.0.0",port=7070)
