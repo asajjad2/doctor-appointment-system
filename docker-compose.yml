@@ -1,7 +1,7 @@
 version: "3"
 services:
   frontend:
-    image: asajjad2/doctor-appointment-frontend:frontend-7
+    image: asajjad2/doctor-appointment-frontend:frontend-8
     ports:
       - "3000:3000"
     environment:
