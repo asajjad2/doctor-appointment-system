@@ -30,6 +30,15 @@ spec:
               port: 9090
             initialDelaySeconds: 15
             timeoutSeconds: 2
+          volumeMounts:
+            - name: config-volume
+              mountPath: /user/details.txt
+              subPath: details.txt
+      volumes:
+        - name: config-volume
+          configMap:
+            name: doctors
+
 ---
 apiVersion: v1
 kind: Service
@@ -43,3 +52,13 @@ spec:
     - protocol: TCP
       port: 9090
       targetPort: 9090
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: doctors
+data:
+  details.txt: |
+    Hey, I am Areeb!
+    👀 I'm interested in Product design & development, machine-learning and RTS games!
+    📫 Connect with me on linkedIn:: www.linkedin.com/in/areeb-sajjad-985519210
