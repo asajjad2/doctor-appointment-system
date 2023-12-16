@@ -11,7 +11,7 @@ appointments = [
 
 @app.route('/hello')
 def hello():
-  greeting = "Hello world!"
+  greeting = "Helloooo world!"
   return greeting
 
 @app.route('/appointments', methods=["GET"])
