@@ -12,7 +12,7 @@ services:
       - appointments
 
   doctors:
-    image: asajjad2/doctor-appointment-doctors-microservice:doctors-6
+    image: asajjad2/doctor-appointment-doctors-microservice:doctors-7
     ports:
       - "9090:9090"
 
