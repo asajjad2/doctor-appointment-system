@@ -17,6 +17,6 @@ services:
       - "9090:9090"
 
   appointments:
-    image: asajjad2/doctor-appointment-appointments-microservice:appointments-3
+    image: asajjad2/doctor-appointment-appointments-microservice:appointments-4
     ports:
       - "7070:7070"
